@@ -448,3 +448,64 @@ console.log(personalMovieDB);
 // Object.setPrototypeOf(john, soldeir)
 // console.log(john.armor);
 // john.sayHellow();
+
+////////////////// Динамическая типизация //////////////////////
+// Превращение в строку
+// 1)
+// console.log(typeof(String(null)));
+// console.log(typeof(String(4)));
+// будет строка
+// 2)
+// console.log(typeof(5 + ''));
+// при сложении со строкой - всегда будет строка
+// const num = 5;
+// console.log('https://vk.com/catalog' + num);
+// const fontSize = 26 + 'px';
+
+// Превращение в число
+// 1)
+// console.log(typeof(Number('4')));
+// 2)
+// console.log(typeof(+'4'));
+// 3)
+// console.log(typeof(parseInt('15px', 10)));
+// let answer = +prompt('Hello', '');
+
+// Превращение в белиновое значение
+//  0, '', null, undefained, Nan; - всегда false
+// 1)
+// let switcher = null;
+// if (switcher) {
+//     console.log('Working...');
+// }
+// switcher = 1;
+// if (switcher) {
+//     console.log('Working...');
+// }
+// 2)
+// console.log(typeof(Boolean('4')));
+// 3)
+// console.log(typeof(!!'3434r'));
+
+////////////////// Задачи с собеседований //////////////////////
+
+// let x = 5; alert(x++); 
+// выведет 5, потому что сначала возвращает исходное значение, а потом уже увеличевает
+// [ ] + false - null + true
+// console.log(typeof([] + false)) //false
+// console.log([] + false - null) //Nan
+// console.log([] + false - null + true) //Nan
+// Выведет Nan
+//  let y = 1;
+//  let x = y = 2; //сначала у присваиваем 2, потом у присваиваем х и получаем 2
+//  alert(x);
+// Выведет 2
+// [] + 1 + 2
+// Выведет строку '12'
+// alert('1'[0]);
+// Выведет 1
+// 2 && 1 && null && 0 && undefined;
+// t && t && f // && - запинается на лжи
+// null
+
+
